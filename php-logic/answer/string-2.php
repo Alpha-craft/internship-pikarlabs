@@ -22,11 +22,9 @@ echo "output1";
 echo "<br>";
 echo chop($wadah,"/");
 
+echo "output2";
 echo "<br>";
 echo chop($wadah2,"/");
-
-
-
 
 
 
