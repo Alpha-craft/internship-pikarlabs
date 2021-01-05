@@ -23,7 +23,7 @@ echo "<br>";
 echo chop($wadah,"/");
 
 echo "<br>";
-echo $wadah2;
+echo chop($wadah2,"/");
 
 
 
