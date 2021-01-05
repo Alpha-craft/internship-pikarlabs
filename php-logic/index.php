@@ -27,7 +27,7 @@
             <td>String Manipulation</td>
             <td><a href="">question/string.php</a></td>
             <td>
-                <a href="">answer/string-1.php</a>
+                <a href="answer/string-1.php">answer/string-1.php</a>
                 <br>
                 <a href="">answer/string-2.php</a>
             </td>
