@@ -29,7 +29,7 @@
             <td>
                 <a href="answer/string-1.php">answer/string-1.php</a>
                 <br>
-                <a href="">answer/string-2.php</a>
+                <a href="answer/string-2.php">answer/string-2.php</a>
             </td>
         </tr>
         <tr>
