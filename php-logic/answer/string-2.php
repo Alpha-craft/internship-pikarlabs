@@ -10,12 +10,12 @@ for($i = 0 ; $i <= strlen($input) -1 ; $i++){
     $wadah .= $input[$i].$penanda ;
 }
 
-$raw = str_replace(' ','',explode('.',$input2));
-$result = implode("",$raw);
+$raw = str_replace(' ','',$input2);
+
 
 $wadah2 = "";
-for($iter = 0; $iter <= strlen($result) -1 ;$iter++){
-    $wadah2 .= $result[$iter].$penanda2;
+for($iter = 0; $iter <= strlen($raw) -1 ;$iter++){
+    $wadah2 .= $raw[$iter].$penanda2;
 }
 
 echo "output1";
