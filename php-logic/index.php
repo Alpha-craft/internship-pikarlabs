@@ -36,15 +36,15 @@
             <td>Array Manipulation</td>
             <td><a href=""> question/array.php</a></td>
             <td>
-                <a href="">answer/array-1.php</a>
+                <a href="answer/array-1.php">answer/array-1.php</a>
                 <br>
-                <a href="">answer/array-2.php</a>
+                <a href="answer/array-2.php">answer/array-2.php</a>
                 <br>
-                <a href="">answer/array-3.php</a>
+                <a href="answer/array-3.php">answer/array-3.php</a>
                 <br>
-                <a href="">answer/array-4.php</a>
+                <a href="answer/array-4.php">answer/array-4.php</a>
                 <br>
-                <a href="">answer/array-5.php</a>
+                <a href="answer/array-5.php">answer/array-5.php</a>
             </td>
         </tr>
         <tr>
