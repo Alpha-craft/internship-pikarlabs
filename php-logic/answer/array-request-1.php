@@ -69,7 +69,7 @@ $input = [
                     </div>
                 <?php endif ?>
                 <?php endforeach ?>
-                <a href="array-request-1.php">|Kembali|</a>
+                <a class="btn btn-primary" href="array-request-1.php">|Kembali|</a>
             <?php endif ?>
             
     </div>
