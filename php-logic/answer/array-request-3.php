@@ -43,10 +43,35 @@ $input = [
                         <td><?= $value['id'] ?></td>
                         <td><?= $value['nama'] ?></td>
                         <td><?= $value['asal'] ?></td>
-                        <td><a href="array-request-2.php?id=<?= $value['id'] ?>">profil</a></td>
+                        <td><a href="array-request-3.php?id=<?= $value['id'] ?>">profil</a></td>
                     </tr>
                 <?php endforeach ?>
             </table>
+        <?php elseif(isset($_GET['id'])): ?>
+
+            <div class="table">
+                <table class="table-hover" border='1' >
+                    <tr>
+                        <th>id</th>
+                        <th>nama</th>
+                        <th>asal</th>
+                        <th>link</th>
+                    </tr>
+                    <?php foreach ($input as $result) :?>
+                        <?php if( strpos ($result['id'],$_GET['id'] ) !== false ): ?>
+                            <!-- memakai strpos() untuk mengecek apakah id berada dalam array['id'] -->
+                            <tr>
+                                <td><?= $result['id'] ?></td>
+                                <td><?= $result['nama'] ?></td>
+                                <td><?= $result['asal'] ?></td>
+                                <td><a href="array-request-3.php?id=<?= $result['id'] ?>">profil</a></td>
+                            </tr>
+                        <?php endif ?>
+                    <?php endforeach ?>
+                </table>
+            </div>
+
+
         <?php else: ?>
             <div class="table">
                 <table class="table-hover" border='1'>
@@ -61,7 +86,7 @@ $input = [
                             <td><?= $value['id'] ?></td>
                             <td><?= $value['nama'] ?></td>
                             <td><?= $value['asal'] ?></td>
-                            <td><a href="array-request-2.php?id=<?= $value['id'] ?>">profil</a></td>
+                            <td><a href="array-request-3.php?id=<?= $value['id'] ?>">profil</a></td>
                         </tr>
                     <?php endforeach ?>
                 </table>
@@ -83,13 +108,18 @@ $input = [
                                 <td><?= $result['id'] ?></td>
                                 <td><?= $result['nama'] ?></td>
                                 <td><?= $result['asal'] ?></td>
-                                <td><a href="array-request-2.php?id=<?= $result['id'] ?>">profil</a></td>
+                                <td><a href="array-request-3.php?id=<?= $result['id'] ?>">profil</a></td>
                             </tr>
                         <?php endif ?>
                     <?php endforeach ?>
                 </table>
             </div>
         <?php endif ?>
+
+
+        
+
+        
     </div>
 </body>
 
