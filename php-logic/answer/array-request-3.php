@@ -25,7 +25,7 @@ $input = [
             <input type="text" name="id" id="search" autofocus required>
             <div class="btn-group">
                 <button type="submit"  class="btn btn-success">Cari</button>
-                <a class="btn btn-danger" href="array-request-2.php">
+                <a class="btn btn-danger" href="array-request-3.php">
                     Reset
                 </a>
             </div>
