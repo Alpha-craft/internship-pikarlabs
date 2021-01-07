@@ -55,7 +55,7 @@
                 <br>
                 <a href="answer/array-request-2.php">answer/array-request-2.php</a>
                 <br>
-                <a href="">answer/array-request-3.php</a>
+                <a href="answer/array-request-3.php">answer/array-request-3.php</a>
             </td>
         </tr>
         <tr>
