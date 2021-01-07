@@ -67,7 +67,7 @@ $input = [
                             <li class="list-group-item" >asal : <?= $result['asal'] ?></li>
                         </ul>
                     </div>
-                <?php endif ?>
+                    <?php endif ?>
                 <?php endforeach ?>
                 <a class="btn btn-primary" href="array-request-1.php">Kembali</a>
             <?php endif ?>
