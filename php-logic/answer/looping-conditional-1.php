@@ -1,7 +1,18 @@
 <?php
-$i = 0;
-for($i = 0 ;$i<5 ; $i++){
-    for($a = 5 ;$a>0 ; $a--){
+$input = 5;
+
+echo "Segitiga A , input=$input ";
+echo "<br>";
+for($i = 1;$i <= $input; $i++){
+    for($j = $i ; $j > 0;$j--){
+        echo "*";
+    }
+    echo "<br>";
+}
+echo "Segitiga B , input=$input ";
+echo "<br>";
+for($i = 1;$i <=$input;$i++){
+    for($j = $input; $j>$i ;$j-- ){
         echo "*";
     }
     echo "<br>";
