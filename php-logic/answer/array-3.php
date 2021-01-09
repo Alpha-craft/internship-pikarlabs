@@ -6,7 +6,7 @@ foreach($input as $key => $value){
     //periksa satu persatu value dari array terlebih dahulu
     // $key berisi index dan $varible $value berisi value array tersebut
     if ($cari == $value ){
-        //cek menggunakan if apakah $cari sesuai dengan $cari jika sesuai maka echo indexnya yaitu $value
+        //cek menggunakan if apakah $cari ada dalam $value jika sesuai maka echo indexnya yaitu $key
         echo "index ke $key";
         
     }
