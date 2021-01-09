@@ -12,7 +12,7 @@ for($i = 1;$i <= $input; $i++){
 echo "Segitiga B , input=$input ";
 echo "<br>";
 for($i = 1;$i <=$input;$i++){
-    for($j = $input; $j>$i ;$j-- ){
+    for($j = $input; $j>=$i ;$j-- ){
         echo "*";
     }
     echo "<br>";
