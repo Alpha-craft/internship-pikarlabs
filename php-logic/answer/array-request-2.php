@@ -4,7 +4,7 @@ $input = [
     [ 'id' => 227, 'nama' => 'renaldy', 'asal' => 'surabaya' ],
     [ 'id' => 423, 'nama' => 'fakhri', 'asal' => 'surabaya' ],
 ];
-//using in_array
+
 
 
 ?>
