@@ -18,8 +18,8 @@ $input = [
 
 <body>
     <div class="container" >
-            <?php if(isset($_GET['id'])): ?>
-                <table style="display:none;" border='1'>
+            <?php if(!isset($_GET['id'])): ?>
+                <table class="table table-hover" border='1'>
                     <tr>
                         <th>id</th>
                         <th>nama</th>
@@ -36,23 +36,6 @@ $input = [
                     <?php endforeach ?>
 
                 </table>
-                    <?php else: ?>
-                        <table  class="table table-hover"  border='2'>
-                            <tr >
-                                <th>id</th>
-                                <th>nama</th>
-                                <th>asal</th>
-                                <th>link</th>
-                            </tr>
-                            <?php foreach ($input as $value) :?>
-                            <tr>
-                                <td><?= $value['id'] ?></td>
-                                <td><?= $value['nama'] ?></td>
-                                <td><?= $value['asal'] ?></td>
-                                <td><a href="array-request-1.php?id=<?= $value['id'] ?>">profil</a></td>
-                            </tr>
-                        <?php endforeach ?>
-                        </table>
             <?php endif ?>
 
 
