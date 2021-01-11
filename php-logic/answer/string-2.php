@@ -26,8 +26,8 @@ echo "<br>";
 echo "output2";
 echo "<br>";
 echo chop($wadah2,"/");
-
-
+echo "<br>";
+echo join(', ', str_split($input));
 
 
 ?>

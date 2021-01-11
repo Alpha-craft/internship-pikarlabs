@@ -7,28 +7,43 @@ $input = [
 
   
 function cariSiswa($cari){
-    $index = 0;
+    
     global $input;
-    foreach($input as $value){
-
+    $nama = null;
+    $id = null;
+    $index = null;
+    $cek = false;
+    foreach($input as $i => $value){
         if ($value['id'] == $cari || $value['nama'] == $cari ){
-            //cek apakah $cari berada dalam $value['nama] atau $value['id']
-            echo "index ke ".$index;
-            echo "<br>";
-            echo "id = ". $value['id'].", ";
-            echo "nama = ". $value['nama'];
-            break;
+            $nama = $value['nama'];
+            $id = $value['id'];
+            $index = $i;
+            $cek = true;
         }
-        elseif($value['id'] !== $cari || $value['nama'] !== $cari ){
-            //jika $value['id] atau $value['nama'] tidak sama dengan $ cari 
-            echo "<br>";
-            echo "maaf data $cari tidak ditemukan";
-            break;
-        }
-        $index++; // increment agar index dapat bertambah sesuai loop
+        
     }
+    if( $cek == true ){
+        echo "<br>";
+        echo "cari siswa \"$cari\" ";
+        echo "<br>";
+        echo "<index ke $index>";
+        echo "id = $id ,";
+        echo "nama = $nama";
+    }
+    elseif($cek !== true){
+        echo "<br>";
+        echo "cari siswa \"$cari\" ";
+        echo "<br>";
+        echo "data tida ditemukan";
+    }
+    // echo var_dump($nama);
+    // echo var_dump($id);
+    // echo var_dump($index);  
+    // echo var_dump($cek);
+
 }
 cariSiswa(122);
 cariSiswa('ivan');
+
 
 ?>

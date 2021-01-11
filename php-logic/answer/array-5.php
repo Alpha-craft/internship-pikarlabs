@@ -6,7 +6,7 @@ $input = [
   ];
 $cariKey = 'nama';
 $cariValue = 'fakhri';
-$index = 0;
+$index = 0 ;
 
 foreach($input as $value){
     // periksa isi array satu persatu menggunakan foreach
