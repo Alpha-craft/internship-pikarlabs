@@ -3,8 +3,20 @@ $input = [
     [ 'id' => 122, 'nama' => 'rama', 'asal' => 'surabaya' ],
     [ 'id' => 227, 'nama' => 'renaldy', 'asal' => 'surabaya' ],
     [ 'id' => 423, 'nama' => 'fakhri', 'asal' => 'surabaya' ],
-  ];
-  
+];
+
+function request($id){
+    global $input;
+      foreach ($input as $i => $value){
+          if($value == $id ){
+              $index = $i;
+              return $index;
+          }
+
+      }
+
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +24,7 @@ $input = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Array-request-1</title>
 </head>
 
@@ -38,18 +50,20 @@ $input = [
                 </table>
             <?php endif ?>
 
-
+        
             <?php if(isset($_GET['id'])): ?>
                 <?php foreach ($input as $result) :?>
                     <?php if($result['id'] == $_GET['id']): ?>
-                    <h4>profil siswa id = <?= $result['id'] ?></h4>
-                    <div class="list-group">
-                        <ul>
-                            <li class="list-group-item" >id : <?= $result['id'] ?></li>
-                            <li class="list-group-item" >nama : <?= $result['nama'] ?></li>
-                            <li class="list-group-item" >asal : <?= $result['asal'] ?></li>
-                        </ul>
-                    </div>
+                        <h4>profil siswa id = <?= $result['id'] ?></h4>
+                        <div class="list-group">
+                            <ul>
+                                <li class="list-group-item" >id : <?= $result['id'] ?></li>
+                                <li class="list-group-item" >nama : <?= $result['nama'] ?></li>
+                                <li class="list-group-item" >asal : <?= $result['asal'] ?></li>
+                            </ul>
+                        </div>
+                    
+                
                     <?php endif ?>
                 <?php endforeach ?>
                 <a class="btn btn-primary" href="array-request-1.php">Kembali</a>
