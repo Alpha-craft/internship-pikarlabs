@@ -18,7 +18,7 @@ include "component/func.php";
             <?php if(isset($index)): ?>
                 <?php showProfile($input,$index) ?>
             <?php else: ?>
-                <h4>data <?= $get ?> tidak ditemukan</h4>
+                <h4>data <?= " \" $get \" " ?> tidak ditemukan</h4>
             <?php endif ?>
         <?php else: ?>
                 <table class="table table-hover" border="1">
