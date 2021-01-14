@@ -1,11 +1,6 @@
 <?php
-
 include "component/data.php";
 include "component/func.php";
-
-
-
-	
 ?>
 <!DOCTYPE html>
 <html lang="en">
