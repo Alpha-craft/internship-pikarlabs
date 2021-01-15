@@ -23,6 +23,13 @@ function showProfile($input,$get_id){
 
 }
 function showTable($data){
+    echo "<table class='table table-hover' border='1' >";
+    echo "<tr>";
+    echo "<th>id</th>";
+    echo "<th>nama</th>";
+    echo "<th>asal</th>";
+    echo "<th>profil</th>";
+    echo "</tr>";
     foreach ($data as $value){
         echo "<tr>";
         echo "<td>".$value['id']."</td>";
@@ -30,8 +37,18 @@ function showTable($data){
         echo "<td>".$value['asal']."</td>";
         echo "<td><a href=?id=".$value['id'].">profil</a></td>";
         echo "</tr>";
+    }       
+    echo "</table>";
+}
+function search($input,$find){
+    $wadah = [];
+    foreach($input as $i => $value){
+        if(strpos($value['id'],$find) !== false){
+            array_push($wadah,$value);
+        }
     }
-        
-    
+    if(isset($wadah)){
+        showTable($wadah);
+    }
 }
 ?>

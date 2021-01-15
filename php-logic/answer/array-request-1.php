@@ -21,15 +21,7 @@ include "component/func.php";
                 <h4>data <?= " \" $get \" " ?> tidak ditemukan</h4>
             <?php endif ?>
         <?php else: ?>
-                <table class="table table-hover" border="1">
-                    <tr>
-                        <th>id</th>
-                        <th>nama</th>
-                        <th>asal</th>
-                        <th>link</th>
-                    </tr>
-                    <?php showTable($input) ?>
-                </table>
+            <?php showTable($input) ?>
         <?php endif ?>
     </div>
 </body>
