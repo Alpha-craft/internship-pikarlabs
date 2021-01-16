@@ -20,7 +20,7 @@
         </tr>
         <tr>
             <td>Looping Conditional Print</td>
-            <td><a href="question/looping-conditional.md">question/looping-conditional.php</a></td>
+            <td><a href="question/looping-conditional.php">question/looping-conditional.php</a></td>
             <td><a href="answer/looping-conditional-1.php">answer/looping-conditional-1.php</a></td>
         </tr>
         <tr>
@@ -34,7 +34,7 @@
         </tr>
         <tr>
             <td>Array Manipulation</td>
-            <td><a href=""> question/array.php</a></td>
+            <td><a href="question/array-manipulation.php"> question/array.php</a></td>
             <td>
                 <a href="answer/array-1.php">answer/array-1.php</a>
                 <br>
@@ -49,7 +49,7 @@
         </tr>
         <tr>
             <td>Array + HTML GET/POST request</td>
-            <td><a href="">question/array-request.php</a></td>
+            <td><a href="question/array-request.php">question/array-request.php</a></td>
             <td>
                 <a href="answer/array-request-1.php">answer/array-request-1.php</a>
                 <br>
