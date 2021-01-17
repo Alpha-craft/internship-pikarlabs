@@ -23,13 +23,16 @@ include "../answer/component/func.php";
         </div>
     </form>
     <?php if(isset($_POST['id'])): ?>
-        <?php $get = $_POST['id'] ?>
+        <?php $id = $_POST['id'] ?>
+        <h4>Hasil yang ditemukan untuk  <?= "\" $id \"" ?> </h4>
+        <?php search($input,$id) ?>
+    <?php elseif(isset($_GET['id'])): ?>
+        <?php $get = $_GET['id'] ?>
         <h4>Hasil yang ditemukan untuk  <?= "\" $get \"" ?> </h4>
-        <?php $find = getID($get) ?>
         <?php search($input,$get) ?>
     <?php else: ?>
         <?php showTable($input) ?>
-            
+
     <?php endif ?>
         
     </div>
