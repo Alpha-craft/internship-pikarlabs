@@ -96,5 +96,38 @@ else{
         }
         echo "<br>";
     }
+    echo "Segitiga H,input = $input";
+    echo "<br>";
+    for($i=1; $i <= $input; $i++){
+        if($i <= $input/2){
+            for($j=$input; $j >= $i; $j--){
+                echo " &nbsp";
+            }
+            if($i != 1){
+                echo "*";
+            }
+            else{
+                echo " &nbsp";
+            }
+            for($k=1; $k <= $i; $k++){
+                echo "*";
+            }
+        }
+        elseif($i >= $input/2){
+            for($j=1; $j <= $i; $j++){
+                echo " &nbsp";
+            }
+            if($i != $input){
+                echo "*";
+            }
+            else{
+                echo " &nbsp";
+            }
+            for($k=$input; $k >= $i; $k--){
+                echo "*";
+            }
+        }
+        echo "<br>";
+    }
 }
 ?>
