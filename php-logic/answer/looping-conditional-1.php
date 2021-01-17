@@ -65,14 +65,17 @@ else{
 
     echo "Segitiga F,input = $input";
     echo "<br>";
-    for( $a=$input; $a>0; $a--){
-        for($i=1; $i<=$a; $i++){
-            echo "&nbsp";
-        }for($a1=10; $a1>$a; $a1--){
-            echo"*";
-        }for($a2=11; $a2>$a; $a2--){
-            echo"*";
-        }echo"<br>";
+    for($i=1; $i <= $input; $i++){
+        for($j=1; $j <= $i%2; $j++){
+            for($k=$input; $k >= $i; $k--){
+                echo " &nbsp";
+            }
+            for($l=1; $l <= $i; $l++){
+                echo "*";
+                echo "&nbsp ";
+            }
+        echo "<br>";
+        }
     }
 }
 ?>
