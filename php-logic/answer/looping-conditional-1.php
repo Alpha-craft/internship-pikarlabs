@@ -77,5 +77,24 @@ else{
         echo "<br>";
         }
     }
+
+    echo "Segitiga G,input = $input";
+    echo "<br>";
+    for($i=1; $i <= $input; $i++){
+        if($i <= $input/2){
+            for($j=1; $j <= $i; $j++){
+                echo "*";
+            }
+        }
+        elseif($i >= $input/2){
+            for($j=$input; $j >= $i; $j--){
+                echo "*";
+            }
+        }
+        if($i != 1 && $i != $input){
+            echo "*";
+        }
+        echo "<br>";
+    }
 }
 ?>
