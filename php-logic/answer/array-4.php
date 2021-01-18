@@ -34,7 +34,7 @@ function cariSiswa($cari){
         echo "<br>";
         echo "cari siswa \"$cari\" ";
         echo "<br>";
-        echo "data tida ditemukan";
+        echo "data tidak ditemukan";
     }
     // echo var_dump($nama);
     // echo var_dump($id);
