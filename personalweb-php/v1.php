@@ -6,14 +6,18 @@ include "components/header.php";
 <?php include "components/navbar.php" ?>
 <!-- Navbar end -->
 
+    
 <!-- Container start -->
 <div class="container mx-auto">
 
-<!-- Bio Start -->
-<div id="Profil" class="py-12 capitalize border-double border-4 border-indigo-700  "> <span class="mx-4"></span> <?= $bio ?></div>
-<!-- Bio end -->
+    <!-- Bio Start -->
+    <div id="Profil" class="py-8 capitalize border-solid border-t-2 border-b-2  border-gray-700 bg-gray-200   ">
+        <span class="mx-4"></span> <?= $bio ?>
+    </div>
+    <!-- Bio end -->
 
 </div>
 <!-- Container end -->
+
 
 <?php include "components/footer.php" ?>
