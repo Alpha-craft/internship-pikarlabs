@@ -6,8 +6,8 @@
         'Profil','Portofolio','Contact'
     ];
     $keahlian = [
-        ['bahasa' => 'html', 'value' => 22,'color' => 'orange'],
-        ['bahasa' => 'Python', 'value' => 25,'color' => 'yellow'],
+        ['bahasa' => 'HTML', 'value' => 22,'color' => 'orange'],
+        ['bahasa' => 'Python', 'value' => 19,'color' => 'yellow'],
         ['bahasa' => 'PHP', 'value' => 12,'color' => 'purple']
 
     ];
