@@ -40,13 +40,19 @@
             'judul' => 'Svvebs',
             'desc' => 'Web untuk berbagi gambar yang dibuat menggunakan HTML,CSS,JS,PHP',
             'link' => 'svvebs.great-site.net/',
-            'img' => ''
+            'img' => 'svvebs.png',
+            'imgs' => [
+                'svvebs.png','svvebs2.png'
+            ]
         ],
         [
-            'juduk' => 'Web Portofolio',
+            'judul' => 'Web Portofolio',
             'desc' => 'Web Portofolio Yang Dibangun menggunakan HTML,CSS',
             'link' => 'https://ainurahman.vercel.app/',
-            'img' => ''
+            'img' => 'portolio.png',
+            'imgs' => [
+                'portofolio.png','portofolio2.png'
+            ]
         ]
     ];
 

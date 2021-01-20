@@ -12,7 +12,7 @@ include "components/header.php";
 
         <!-- Bio Start -->
         <div class=" inline-block ">
-            <div class="transition duration-300 ease-in-out my-8 bg-gray-100 hover:bg-white rounded-md hover:shadow-xl py-6 ">
+            <div class="transition duration-300 ease-in-out  my-8 bg-gray-100 hover:bg-white rounded-md hover:shadow-xl py-6 ">
                 <img id="Profil" class="rounded-full w-44 border-2 border-gray-200 mx-auto " src="assets/profile.jpg" alt="Profil-Img" id="profil">
                 <h4 class="text-2xl font-sans text-center" >Ainurahman</h4>
             </div>
@@ -49,7 +49,21 @@ include "components/header.php";
             </div>
         <!-- Education End -->
         </div>
+                
 
+        <!-- Portofolio start -->
+        <div class="h-auto p-4 ease-in-out shadow-inner my-12 bg-gray-200  rounded-md">
+                <div class="border-b-2 text-left text-2xl border-gray-600">Portofolio</div>
+            <div class="flex">
+                <?php foreach ($portofolio as  $exp) :?>
+                    <div class="transition duration-300 bg-gray-100 my-4 flex-auto hover:shadow-md hover:bg-white " >
+                        <div class="py-2 my-4 mx-auto w-1/3 border-b-2 text-center border-gray-600" > <?= $exp['judul'] ?> </div>
+                        <div><img src="assets/<?= $exp['img']?>" alt="<?= $exp['img'] ?>"></div>
+                    </div>
+                <?php endforeach ?>
+            </div>
+        </div>
+        <!-- Portofolio End -->
     </div>
     <!-- Container end -->
 </div>
