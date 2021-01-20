@@ -53,12 +53,18 @@ include "components/header.php";
 
         <!-- Portofolio start -->
         <div class="h-auto p-4 ease-in-out shadow-inner my-12 bg-gray-200  rounded-md">
-                <div class="border-b-2 text-left text-2xl border-gray-600">Portofolio</div>
-            <div class="flex">
+                <div class="border-b-2 text-left text-2xl  border-gray-600">Portofolio</div>
+            <div class="flex flex-row">
                 <?php foreach ($portofolio as  $exp) :?>
-                    <div class="transition duration-300 bg-gray-100 my-4 flex-auto hover:shadow-md hover:bg-white " >
-                        <div class="py-2 my-4 mx-auto w-1/3 border-b-2 text-center border-gray-600" > <?= $exp['judul'] ?> </div>
-                        <div><img src="assets/<?= $exp['img']?>" alt="<?= $exp['img'] ?>"></div>
+                    <div class="group transition duration-300 bg-gray-100 mx-4 my-4 hover:shadow-md hover:bg-white " >
+                        <div class="flex flex-col">
+                            <div class="border-b-2 border-gray-600 py-2 my-4 mx-auto text-3xl" >
+                               <p class="text-center" ></p> <?= $exp['judul'] ?> 
+                            </div>
+                            <div class="bg-black">
+                                <img class=" transition-opacity duration-500 ease-out w-auto h-auto opacity-75 group-hover:opacity-100" src="assets/<?= $exp['img']?>" alt="<?= $exp['img'] ?>">
+                            </div>
+                        </div>
                     </div>
                 <?php endforeach ?>
             </div>

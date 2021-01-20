@@ -49,9 +49,9 @@
             'judul' => 'Web Portofolio',
             'desc' => 'Web Portofolio Yang Dibangun menggunakan HTML,CSS',
             'link' => 'https://ainurahman.vercel.app/',
-            'img' => 'portolio.png',
+            'img' => 'portofolio.png',
             'imgs' => [
-                'portofolio.png','portofolio2.png'
+                'portofolio.png','portofolio2.png','portofolio3.png'
             ]
         ]
     ];
