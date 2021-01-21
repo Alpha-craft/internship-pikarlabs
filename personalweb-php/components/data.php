@@ -40,13 +40,15 @@
             'judul' => 'Svvebs',
             'desc' => 'Web untuk berbagi gambar yang dibuat menggunakan HTML,CSS,JS,PHP',
             'link' => 'http://svvebs.great-site.net/',
-            'img' => 'svvebs.png',
-            'imgs' => 'svvebs.png',
-            'imgs' => 'svvebs2.png',
-            'imgs' => 'svvebs3.png',
-            'imgs' => 'svvebsaplod.png',
-            'imgs' => 'svvebsdark.png',
-            'imgs' => 'svvebsregist.png',
+            'img' =>    'svvebs.png',
+            'imgs' => [
+                'svvebs2.png',
+                'svvebs3.png',
+                'svvebsaplod.png',
+                'svvebsdark.png',
+                'svvebsregist.png',
+                'login.png'
+            ],
             'id' => 'svvebs'
         ],
         [
@@ -55,7 +57,9 @@
             'link' => 'https://ainurahman.vercel.app/',
             'img' => 'portofolio.png',
             'imgs' => [
-                'portofolio.png','portofolio2.png','portofolio3.png'
+                'portofolio.png',
+                'portofolio2.png',
+                'portofolio3.png'
             ],
             'id' => 'porto'
         ]

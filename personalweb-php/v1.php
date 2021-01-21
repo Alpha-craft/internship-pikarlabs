@@ -76,25 +76,8 @@ include "components/header.php";
             </div>
             <!-- Modal Start -->
             <div style="display:none" id="<?= $porto['id'] ?>" class=" bg-black opacity-60 transition-all ease-in duration-500  z-50 w-full h-full top-0 left-0 " >
-                <div class="swiper-container">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        ...
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div>
-                </div>       
+                
+                       
             </div>
             <!-- Modal End -->
         </div>
