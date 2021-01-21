@@ -61,13 +61,42 @@ include "components/header.php";
                             <div class="border-b-2 border-gray-600 py-2 my-4 mx-auto text-3xl" >
                                <p class="text-center" ></p> <?= $exp['judul'] ?> 
                             </div>
-                            <div class="bg-black">
+                             <div class="bg-black"> <!-- agar gambar menjadi gelap sebelum di hover -->
                                 <img class=" transition-opacity duration-500 ease-out w-auto h-auto opacity-75 group-hover:opacity-100" src="assets/<?= $exp['img']?>" alt="<?= $exp['img'] ?>">
                             </div>
+                        </div>
+                        <div class="flex flex-col my-4 py-2" >
+                            <button onclick="showModal('<?= $exp['id'] ?>')" class="bg-green-500 rounded-md m-2 p-2 hover:bg-green-400" >Galeri</button>
+                            <a class="bg-blue-500 rounded-md m-2 p-2 text-center hover:bg-blue-400" href="<?= $exp['link']?>"target="_blank" >
+                                kunjungi
+                            </a>
                         </div>
                     </div>
                 <?php endforeach ?>
             </div>
+            <!-- Modal Start -->
+            <div style="display:none" id="<?= $porto['id'] ?>" class=" bg-black opacity-60 transition-all ease-in duration-500  z-50 w-full h-full top-0 left-0 " >
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>       
+            </div>
+            <!-- Modal End -->
         </div>
         <!-- Portofolio End -->
     </div>

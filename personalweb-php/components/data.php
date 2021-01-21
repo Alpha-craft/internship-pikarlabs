@@ -39,11 +39,15 @@
         [
             'judul' => 'Svvebs',
             'desc' => 'Web untuk berbagi gambar yang dibuat menggunakan HTML,CSS,JS,PHP',
-            'link' => 'svvebs.great-site.net/',
+            'link' => 'http://svvebs.great-site.net/',
             'img' => 'svvebs.png',
-            'imgs' => [
-                'svvebs.png','svvebs2.png'
-            ]
+            'imgs' => 'svvebs.png',
+            'imgs' => 'svvebs2.png',
+            'imgs' => 'svvebs3.png',
+            'imgs' => 'svvebsaplod.png',
+            'imgs' => 'svvebsdark.png',
+            'imgs' => 'svvebsregist.png',
+            'id' => 'svvebs'
         ],
         [
             'judul' => 'Web Portofolio',
@@ -52,7 +56,8 @@
             'img' => 'portofolio.png',
             'imgs' => [
                 'portofolio.png','portofolio2.png','portofolio3.png'
-            ]
+            ],
+            'id' => 'porto'
         ]
     ];
 
