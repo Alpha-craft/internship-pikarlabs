@@ -1,6 +1,6 @@
 <?php
 include "components/data.php";
-include "components/header.php";
+include "components/header.php";    
 include "components/func.php";
 ?>
 <!-- Navbar Starts -->
@@ -63,11 +63,11 @@ include "components/func.php";
                                <p class="text-center" ></p> <?= $exp['judul'] ?> 
                             </div>
                              <div class="bg-black"> <!-- agar gambar menjadi gelap sebelum di hover -->
-                                <img class=" transition-opacity duration-500 ease-out w-auto h-auto opacity-75 group-hover:opacity-100" src="assets/<?= $exp['img']?>" alt="<?= $exp['img'] ?>">
+                                <img class="transition-opacity duration-500 ease-out w-auto h-auto opacity-75 group-hover:opacity-100" src="assets/<?= $exp['img']?>" alt="<?= $exp['img'] ?>">
                             </div>
                         </div>
                         <div class="flex flex-col my-4 py-2" >
-                            <button onclick="showModal('<?=$exp['id']?>')" class="bg-green-500 rounded-md m-2 p-2 text-center hover:bg-green-400" >Galeri</button>
+                            <button onclick="showModal('<?= $exp['id']?>')" class="bg-green-500 rounded-md m-2 p-2 text-center hover:bg-green-400 trigger" >Galeri</button>
                             <a class="bg-blue-500 rounded-md m-2 p-2 text-center hover:bg-blue-400" href="<?= $exp['link']?>"target="_blank" >
                                 kunjungi
                             </a>
@@ -77,19 +77,27 @@ include "components/func.php";
             </div>
             <!-- Modal Start -->
             <?php foreach ($portofolio as $id => $porto) :?>
-                <div   class="z-20 bg-gray-600 transition-all ease-in duration-500  w-full h-full top-0 left-0  overflow-auto" >
+                <div id="<?=$porto['id']?>"  class="fixed hidden z-10 w-full h-full top-0 left-0 text-center bg-black bg-opacity-60 transition-all ease-in-out duration-500 " >
                     <!-- Carousel Start -->
-                    <div style="display:none" id="<?= $porto['id'] ?>" >
-                        <?php $index = $id  ?>
-                        <?php $image =  getImg($portofolio[$index]['img'],$portofolio[$index]['imgs']) ?>
-                        <?php showModal($image) ?>
-                    </div>
+                            
+                    <?php $index = $id  ?>
+                    <?php $image =  getImg($portofolio[$index]['img'],$portofolio[$index]['imgs']) ?>
+                    <?php showModal($image) ?>
+                             
+                        
                     <!-- Carousel End       -->
                 </div>
             <?php endforeach ?>
+
             <!-- Modal End -->
         </div>
         <!-- Portofolio End -->
+
+        <!-- Email Start -->
+        <div class="my-12 bg-gray-200 shadow-inner h-auto rounded-md" >
+					<div class="text-left border-b-2 py-2 px-2 border-gray-600 text-2xl " >Email</div>
+        </div>
+        <!-- Email end -->
     </div>
     <!-- Container end -->
 </div>

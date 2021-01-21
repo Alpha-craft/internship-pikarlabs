@@ -9,4 +9,5 @@ function getImg($data,$append){
 function showModal($image){
   include "components/carousel.php";
 }
+
 ?>
