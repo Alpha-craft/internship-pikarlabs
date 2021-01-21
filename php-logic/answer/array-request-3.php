@@ -26,10 +26,10 @@ include "../answer/component/func.php";
         <?php $id = $_POST['id'] ?>
         <h4>Hasil yang ditemukan untuk  <?= "\" $id \"" ?> </h4>
         <?php search($input,$id) ?>
-    <?php elseif(isset($_GET['id'])): ?>
-        <?php $get = $_GET['id'] ?>
-        <h4>Hasil yang ditemukan untuk  <?= "\" $get \"" ?> </h4>
-        <?php search($input,$get) ?>
+    <?php elseif(isset($_GET['profil'])): ?>
+        <?php $profil = $_GET['profil'] ?>
+        <?php $index = getID($profil) ?>
+        <?php showProfile($input,$index) ?>
     <?php else: ?>
         <?php showTable($input) ?>
 

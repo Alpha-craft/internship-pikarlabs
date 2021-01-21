@@ -1,6 +1,7 @@
 <?php
 include "components/data.php";
 include "components/header.php";
+include "components/func.php";
 ?>
 <!-- Navbar Starts -->
 <?php include "components/navbar.php" ?>
@@ -29,7 +30,7 @@ include "components/header.php";
                 <?php foreach ($keahlian as $skill) :?>
                     <div class="text-xl p-2"><?= $skill['bahasa'] ?>:</div>
                     <div class="rounded-md w-full p-1">
-                        <div style="width:<?= $skill['value']?>%;background:<?= $skill['color']?>" class="rounded-md text-white p-2">
+                        <div style="width:<?= $skill['value']?>%;background:<?= $skill['color']?>" class="rounded-md text-black p-2">
                             <?= $skill['value']?>%  
                         </div>
                     </div>
@@ -55,7 +56,7 @@ include "components/header.php";
         <div class="h-auto p-4 ease-in-out shadow-inner my-12 bg-gray-200  rounded-md">
                 <div class="border-b-2 text-left text-2xl  border-gray-600">Portofolio</div>
             <div class="flex flex-row">
-                <?php foreach ($portofolio as  $exp) :?>
+                <?php foreach ($portofolio as $i => $exp) :?>
                     <div class="group transition duration-300 bg-gray-100 mx-4 my-4 hover:shadow-md hover:bg-white " >
                         <div class="flex flex-col">
                             <div class="border-b-2 border-gray-600 py-2 my-4 mx-auto text-3xl" >
@@ -66,7 +67,7 @@ include "components/header.php";
                             </div>
                         </div>
                         <div class="flex flex-col my-4 py-2" >
-                            <button onclick="showModal('<?= $exp['id'] ?>')" class="bg-green-500 rounded-md m-2 p-2 hover:bg-green-400" >Galeri</button>
+                            <button onclick="showModal('<?=$exp['id']?>')" class="bg-green-500 rounded-md m-2 p-2 text-center hover:bg-green-400" >Galeri</button>
                             <a class="bg-blue-500 rounded-md m-2 p-2 text-center hover:bg-blue-400" href="<?= $exp['link']?>"target="_blank" >
                                 kunjungi
                             </a>
@@ -75,10 +76,17 @@ include "components/header.php";
                 <?php endforeach ?>
             </div>
             <!-- Modal Start -->
-            <div style="display:none" id="<?= $porto['id'] ?>" class=" bg-black opacity-60 transition-all ease-in duration-500  z-50 w-full h-full top-0 left-0 " >
-                
-                       
-            </div>
+            <?php foreach ($portofolio as $id => $porto) :?>
+                <div   class="z-20 bg-gray-600 transition-all ease-in duration-500  w-full h-full top-0 left-0  overflow-auto" >
+                    <!-- Carousel Start -->
+                    <div style="display:none" id="<?= $porto['id'] ?>" >
+                        <?php $index = $id  ?>
+                        <?php $image =  getImg($portofolio[$index]['img'],$portofolio[$index]['imgs']) ?>
+                        <?php showModal($image) ?>
+                    </div>
+                    <!-- Carousel End       -->
+                </div>
+            <?php endforeach ?>
             <!-- Modal End -->
         </div>
         <!-- Portofolio End -->

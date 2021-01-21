@@ -8,7 +8,7 @@
     $keahlian = [
         ['bahasa' => 'HTML', 'value' => 22,'color' => 'orange'],
         ['bahasa' => 'Python', 'value' => 19,'color' => 'yellow'],
-        ['bahasa' => 'PHP', 'value' => 12,'color' => 'purple']
+        ['bahasa' => 'PHP', 'value' => 12,'color' => 'lightblue']
 
     ];
     $bio = "
@@ -57,7 +57,6 @@
             'link' => 'https://ainurahman.vercel.app/',
             'img' => 'portofolio.png',
             'imgs' => [
-                'portofolio.png',
                 'portofolio2.png',
                 'portofolio3.png'
             ],

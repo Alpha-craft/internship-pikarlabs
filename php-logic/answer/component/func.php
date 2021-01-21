@@ -35,7 +35,7 @@ function showTable($data){
         echo "<td>".$value['id']."</td>";
         echo "<td>".$value['nama']."</td>";
         echo "<td>".$value['asal']."</td>";
-        echo "<td><a href=?id=".$value['id'].">profil</a></td>";
+        echo "<td><a href=?id=".$value['id']."&profil=".$value['id'].">profil</a></td>";
         echo "</tr>";
     }       
     echo "</table>";

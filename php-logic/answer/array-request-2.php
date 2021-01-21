@@ -22,7 +22,11 @@ include "component/func.php";
             </a>
         </div>
     </form>
-    <?php if(isset($_GET['id'])): ?>
+    <?php if(isset($_GET['profil'])):?>
+        <?php $profil = $_GET['profil'] ?>
+        <?php $index = getID($profil) ?>
+        <?php showProfile($input,$index) ?>
+    <?php elseif(isset($_GET['id'])): ?>
         <?php $get = $_GET['id'] ?>
         <h4>Hasil yang ditemukan untuk  <?= "\" $get \"" ?> </h4>
         <?php $find = getID($get) ?>
