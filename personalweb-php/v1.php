@@ -77,14 +77,23 @@ include "components/func.php";
             </div>
             <!-- Modal Start -->
             <?php foreach ($portofolio as $id => $porto) :?>
-                <div id="<?=$porto['id']?>"  class="fixed hidden z-10 w-full h-full top-0 left-0 text-center bg-black bg-opacity-60 transition-all ease-in-out duration-500 " >
+                <div id="<?=$porto['id']?>"  class=" hidden z-10 w-full h-full top-0 left-0 text-center bg-black bg-opacity-60 transition-all ease-in-out duration-500 " >
                     <!-- Carousel Start -->
                             
                     <?php $index = $id  ?>
                     <?php $image =  getImg($portofolio[$index]['img'],$portofolio[$index]['imgs']) ?>
-                    <?php showModal($image) ?>
-                             
-                        
+                    <div class="mx-12 my-12 ">
+                        <div class="navigation-wrapper">
+                            <div id="my-keen-slider" class="keen-slider">
+                                <?php foreach ($image as $pict) :?>
+                                    <div class="keen-slider__slide number-slide"><img class="" src="assets/<?= $pict?>" alt=""></div>
+                                <?php endforeach ?>
+                            </div>
+                                <p class="arrow arrow--left" id="arrow-left" >next</p>
+                                <p class="arrow arrow--right" id="arrow-right" >pref</p>
+                        </div>
+                        <div id="dots" class="dots"></div>
+                    </div>    
                     <!-- Carousel End       -->
                 </div>
             <?php endforeach ?>
