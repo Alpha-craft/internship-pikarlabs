@@ -9,7 +9,7 @@ include "components/func.php";
 
 <div class="bg-gray-100">
     <!-- Container start -->
-    <div class="container mx-auto pt-12 ">
+    <div class="md:container container md:mx-auto mx-3.5">
 
         <!-- Bio Start -->
         <div class=" inline-block ">
@@ -55,7 +55,7 @@ include "components/func.php";
         <!-- Portofolio start -->
         <div class="h-auto p-4 ease-in-out shadow-inner my-12 bg-gray-200  rounded-md">
                 <div class="border-b-2 text-left text-2xl  border-gray-600">Portofolio</div>
-            <div class="flex flex-row">
+            <div class="flex md:flex-row flex-col">
                 <?php foreach ($portofolio as $i => $exp) :?>
                     <div class="group transition duration-300 bg-gray-100 mx-4 my-4 hover:shadow-md hover:bg-white " >
                         <div class="flex flex-col">
@@ -77,14 +77,14 @@ include "components/func.php";
             </div>
             <!-- Modal Start -->
             <?php foreach ($portofolio as $id => $porto) :?>
-                <div id="<?=$porto['id']?>"  class=" hidden z-10 w-full h-full top-0 left-0 text-center bg-black bg-opacity-60 transition-all ease-in-out duration-500 " >
+                <div id="<?=$porto['id']?>"  class="hidden fixed  z-50 w-full h-full top-0 left-0 text-center bg-black bg-opacity-60 transition-all ease-in-out duration-500 " >
                     <!-- Carousel Start -->
                             
-                    <?php $index = $id  ?>
-                    <?php $image =  getImg($portofolio[$index]['img'],$portofolio[$index]['imgs']) ?>
+                        <?php $index = $id  ?>
+                        <?php $image =  getImg($portofolio[$index]['img'],$portofolio[$index]['imgs']) ?>
                     <div class="mx-12 my-12 ">
                         <div class="navigation-wrapper">
-                            <div id="my-keen-slider" class="keen-slider">
+                            <div id="my-keen-slider" class="keen-slider flex">
                                 <?php foreach ($image as $pict) :?>
                                     <div class="keen-slider__slide number-slide"><img class="" src="assets/<?= $pict?>" alt=""></div>
                                 <?php endforeach ?>
@@ -97,6 +97,7 @@ include "components/func.php";
                     <!-- Carousel End       -->
                 </div>
             <?php endforeach ?>
+            
 
             <!-- Modal End -->
         </div>
@@ -104,7 +105,8 @@ include "components/func.php";
 
         <!-- Email Start -->
         <div class="my-12 bg-gray-200 shadow-inner h-auto rounded-md" >
-					<div class="text-left border-b-2 py-2 px-2 border-gray-600 text-2xl " >Email</div>
+            <div class="text-left border-b-2 py-2 px-2 border-gray-600 text-2xl " >Email</div>
+            <?php include"components/email.php" ?>
         </div>
         <!-- Email end -->
     </div>
