@@ -57,7 +57,7 @@ include "components/func.php";
                 <div class="border-b-2 text-left text-2xl  border-gray-600">Portofolio</div>
             <div class="flex md:flex-row flex-col">
                 <?php foreach ($portofolio as $i => $exp) :?>
-                    <div class="group transition duration-300 bg-gray-100 mx-4 my-4 hover:shadow-md hover:bg-white " >
+                    <div class="group transition duration-300 bg-gray-100 mx-4 my-4 hover:shadow-md hover:bg-white rounded-md " >
                         <div class="flex flex-col">
                             <div class="border-b-2 border-gray-600 py-2 my-4 mx-auto text-3xl" >
                                <p class="text-center" ></p> <?= $exp['judul'] ?> 
@@ -82,18 +82,17 @@ include "components/func.php";
                             
                         <?php $index = $id  ?>
                         <?php $image =  getImg($portofolio[$index]['img'],$portofolio[$index]['imgs']) ?>
-                    <div class="mx-12 my-12 ">
-                        <div class="navigation-wrapper">
-                            <div id="my-keen-slider" class="keen-slider flex">
-                                <?php foreach ($image as $pict) :?>
-                                    <div class="keen-slider__slide number-slide"><img class="" src="assets/<?= $pict?>" alt=""></div>
-                                <?php endforeach ?>
+                        <!-- Swiper -->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                            <?php foreach ($image as $pict) :?>
+                            <div class="swiper-slide"> <img src="assets/<?= $pict?>" alt="">  </div>
+                            <?php endforeach ?>
                             </div>
-                                <p class="arrow arrow--left" id="arrow-left" >next</p>
-                                <p class="arrow arrow--right" id="arrow-right" >pref</p>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
-                        <div id="dots" class="dots"></div>
-                    </div>    
                     <!-- Carousel End       -->
                 </div>
             <?php endforeach ?>
@@ -104,7 +103,7 @@ include "components/func.php";
         <!-- Portofolio End -->
 
         <!-- Email Start -->
-        <div class="my-12 bg-gray-200 shadow-inner h-auto rounded-md" >
+        <div class="my-12 bg-gray-200 shadow-inner h-auto w-auto rounded-md" >
             <div class="text-left border-b-2 py-2 px-2 border-gray-600 text-2xl " >Email</div>
             <?php include"components/email.php" ?>
         </div>
