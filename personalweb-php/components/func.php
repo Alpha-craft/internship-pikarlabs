@@ -6,7 +6,7 @@ function getImg($data,$append){
   $result = array_merge($result,$append);
   return $result;
 }
-function showModal($image){
+function carousel($image){
   include "components/carousel.php";
 }
 

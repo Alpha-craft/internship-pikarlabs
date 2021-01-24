@@ -3,11 +3,12 @@ include "components/data.php";
 include "components/header.php";    
 include "components/func.php";
 ?>
+
+
+<div class="bg-gray-100">
 <!-- Navbar Starts -->
 <?php include "components/navbar.php" ?>
 <!-- Navbar end -->
-
-<div class="bg-gray-100">
     <!-- Container start -->
     <div class="md:container container md:mx-auto mx-3.5">
 
@@ -79,20 +80,12 @@ include "components/func.php";
             <?php foreach ($portofolio as $id => $porto) :?>
                 <div id="<?=$porto['id']?>"  class="hidden fixed  z-50 w-full h-full top-0 left-0 text-center bg-black bg-opacity-60 transition-all ease-in-out duration-500 " >
                     <!-- Carousel Start -->
-                            
+                        <!-- button close -->
+                            <button onclick="close('<?=$porto['id']?>')"  >close</button>
                         <?php $index = $id  ?>
                         <?php $image =  getImg($portofolio[$index]['img'],$portofolio[$index]['imgs']) ?>
                         <!-- Swiper -->
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                            <?php foreach ($image as $pict) :?>
-                            <div class="swiper-slide"> <img src="assets/<?= $pict?>" alt="">  </div>
-                            <?php endforeach ?>
-                            </div>
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
+                        <?php carousel($image) ?>
                     <!-- Carousel End       -->
                 </div>
             <?php endforeach ?>
