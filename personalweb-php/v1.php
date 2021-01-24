@@ -6,12 +6,11 @@ include "components/func.php";
 
 
 <div class="bg-gray-100">
-<!-- Navbar Starts -->
-<?php include "components/navbar.php" ?>
-<!-- Navbar end -->
+		<!-- Navbar Starts -->
+		<?php include "components/navbar.php" ?>
+		<!-- Navbar end -->
     <!-- Container start -->
     <div class="md:container container md:mx-auto mx-3.5">
-
         <!-- Bio Start -->
         <div class=" inline-block ">
             <div class="transition duration-300 ease-in-out  my-8 bg-gray-100 hover:bg-white rounded-md hover:shadow-xl py-6 ">
@@ -27,7 +26,7 @@ include "components/func.php";
         <!-- Skill Start-->
         <div class="transition duration-300 ease-in-out  py-12 my-12 bg-gray-100 hover:bg-white hover:shadow-md rounded-md" >
             <div class="text-center text-3xl border-b-2  border-gray-600" >My-Skills</div>
-            <div class=" grid md:grid-cols-1" >
+            <div class=" grid md:grid-cols-2" >
                 <?php foreach ($keahlian as $skill) :?>
                     <div class="text-xl p-2"><?= $skill['bahasa'] ?>:</div>
                     <div class="rounded-md w-full p-1">
@@ -55,7 +54,7 @@ include "components/func.php";
 
         <!-- Portofolio start -->
         <div class="h-auto p-4 ease-in-out shadow-inner my-12 bg-gray-200  rounded-md">
-                <div class="border-b-2 text-left text-2xl  border-gray-600">Portofolio</div>
+          	<div class="border-b-2 text-left text-2xl  border-gray-600">Portofolio</div>
             <div class="flex md:flex-row flex-col">
                 <?php foreach ($portofolio as $i => $exp) :?>
                     <div class="group transition duration-300 bg-gray-100 mx-4 my-4 hover:shadow-md hover:bg-white rounded-md " >
@@ -92,7 +91,7 @@ include "components/func.php";
             
 
             <!-- Modal End -->
-        </div>
+      	</div>
         <!-- Portofolio End -->
 
         <!-- Email Start -->
