@@ -1,3 +1,4 @@
+{% include "header.twig" %}
 <div class="bg-gray-100">
     <!-- Navbar Starts -->
     {% include "navbar.twig" %}
@@ -80,9 +81,7 @@
             <div id="{{porto.id}}" class=" hidden fixed  z-50 w-full h-full top-0 left-0 text-center bg-black bg-opacity-60 transition-all ease-in-out duration-500 ">
                 <!-- Carousel Start -->
                 <!-- button close -->
-                <button class=" border bg-red-500  border-red-500 rounded-md p-1 " onclick="tutup('{{porto.id}}')">Close</button> 
-                {% set index = loop.index0 %}
-                {% set image = porto.imgs|merge([porto.img]) %}
+                <button class=" border bg-red-500  border-red-500 rounded-md p-1 " onclick="tutup('{{porto.id}}')">Close</button> {% set index = loop.index0 %} {% set image = porto.imgs|merge([porto.img]) %}
                 <!-- Swiper -->
                 {% include "carousel.twig" %}
                 <!-- Carousel End       -->
@@ -98,9 +97,11 @@
         <!-- Email Start -->
         <div class=" bg-gray-200 shadow-inner h-auto w-auto rounded-md">
             <div class="text-left border-b-2 py-2 px-2 border-gray-600 text-2xl ">Email</div>
-            {# {% include "components/email.php" %} #}
+            {% include "email.twig" %}
         </div>
         <!-- Email end -->
     </div>
     <!-- Container end -->
 </div>
+
+<div></div>{% include "footer.twig" %}

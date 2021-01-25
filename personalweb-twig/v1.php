@@ -1,8 +1,14 @@
 <?php
 include "root.php";
-include "components/data.php";
-include "components/header.php";    
+include "components/data.php"; 
 include "components/func.php";
+
+if(isset($_POST['kirim'])){
+  $dari = $_POST['from'];
+  $subjek = $_POST['subjek'];
+  $pesan = $_POST['msg'];
+  email($dari,$subjek,$pesan);
+}
 
 echo $twig->render('v1.twig',[
   'nav_item' => $nav_item,
@@ -12,7 +18,4 @@ echo $twig->render('v1.twig',[
   'portofolio' => $portofolio,
 
 ]);
-include "components/email.php";
-
-include "components/footer.php"
 ?>

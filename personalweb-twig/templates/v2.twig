@@ -1,0 +1,84 @@
+<style>
+*{
+  scroll-behavior: smooth;
+}
+.bg_img{
+  background-image: url('assets/pexels.jpg')
+}
+</style>
+
+<div  class="bg_img bg-fixed bg-no-repeat items-center justify-center  mb-12 bg-cover" >
+  
+  <div  class="flex items-center justify-center h-screen mb-12 " >
+  <!-- Navbar Start -->
+  {% include "navbar.twig" %}
+  <!-- Navbar End -->
+  </div>
+  
+  <!-- Container Start -->
+  <div class="container mx-auto  ">
+    <!-- Bio start -->
+      <div  class=" bg-gray-200 my-12 md:py-4 py-2 rounded-md ">
+      <h1 id="Profil" class="text-left text-xl border-b-2 border-gray-600 w-1/6 px-1 py-1 md:py-2 md:text-3xl" >Ainurahman</h1>
+      <p class=" py-2 px-2 capitalize " ><span class="mx-2" ></span>{{bio}}</p>
+      </div>
+    <!-- Bio End -->
+
+    <!-- Skill start -->
+      <div class="my-12 py-6 bg-gray-200 rounded-md " >
+        <div class="text-center md:text-3xl text-xl border-b-2 border-gray-600 " >My-Skills</div>
+        <div class="grid md:grid-cols-2" >
+        {% for skill in keahlian %}
+            <div class="text-xl p-2">{{skill.bahasa}}:</div>
+            <div class="rounded-md w-full p-1">
+                <div style="width:{{skill.value}}%;background:{{skill.color}}" class="rounded-md text-black p-2">
+                  {{skill.value}}%  
+                </div>
+              </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- Skill end -->
+
+      <!-- Education Start -->
+      <div class=" my-12 py-6  bg-gray-200 rounded-md " >
+        <div class="text-center text-xl md:text-3xl border-b-2 border-gray-600" >Pendidikan</div>
+        <div class="grid md:grid-cols-2" >
+        {% for edu in pendidikan %}
+            <div class="m2 p-2" > {{edu.tahun}} </div>
+            <div class="m2 p-2" > {{edu.sekolah}} </div>
+         {% endfor %}
+        </div>
+      </div>
+      <!-- Education End -->
+
+      <!-- Portofolio Start -->
+      <div class="my-12 py-6 bg-gray-200 rounded-md" > 
+        <div class="text-left text-xl md:text-3xl border-b-2 border-gray-600" >Portofolio</div>
+        <div class="flex md:flex-row flex-col" > 
+        {% for e %}
+          <?php foreach ($portofolio as $i => $exp) :?>
+            <div class="group transition duration-300 bg-gray-100 mx-4 my-4 hover:shadow-md hover:bg-white rounded-md " >
+              <div class="flex flex-col">
+                <div class="border-b-2 border-gray-600 py-2 my-4 mx-auto text-3xl" >
+                  <p class="text-center" ></p> <?= $exp['judul'] ?> 
+                </div>
+                <div class="bg-black"> <!-- agar gambar menjadi gelap sebelum di hover -->
+                  <img class="transition-opacity duration-500 ease-out w-auto h-auto opacity-75 group-hover:opacity-100" src="assets/<?= $exp['img']?>" alt="<?= $exp['img'] ?>">
+                </div>
+              </div>
+              <div class="flex flex-col my-4 py-2" >
+                <button onclick="showModal('<?= $exp['id']?>')" class="bg-green-500 rounded-md m-2 p-2 text-center hover:bg-green-400 trigger" >Galeri</button>
+                <a class="bg-blue-500 rounded-md m-2 p-2 text-center hover:bg-blue-400" href="<?= $exp['link']?>"target="_blank" >
+                  kunjungi
+                </a>
+              </div>
+            </div>
+          <?php endforeach ?>
+        </div>
+      </div>
+      <!-- Portofolio End -->
+    <!-- Container End -->
+</div>
+
+<?php include "components/footer.php" ?>
