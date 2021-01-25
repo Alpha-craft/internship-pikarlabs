@@ -18,18 +18,18 @@ include "components/func.php";
                 <h4 class="text-2xl font-sans text-center" >Ainurahman</h4>
             </div>
             <div  class="transition duration-500 ease-in-out py-8 rounded-md hover:shadow-lg capitalize hover:bg-white bg-gray-100 ">
-                <p class="font-mono" ><span class="px-4"></span> <?= $bio ?> </p>
+                <p class="font-mono px-4" ><span class="px-4"></span> <?= $bio ?> </p>
             </div>
         </div>
         <!-- Bio end -->
 
         <!-- Skill Start-->
         <div class="transition duration-300 ease-in-out  py-12 my-12 bg-gray-100 hover:bg-white hover:shadow-md rounded-md" >
-            <div class="text-center text-3xl border-b-2  border-gray-600" >My-Skills</div>
+            <div class="text-center text-3xl border-b-2 px-4 border-gray-600" >My-Skills</div>
             <div class=" grid md:grid-cols-2" >
                 <?php foreach ($keahlian as $skill) :?>
                     <div class="text-xl p-2"><?= $skill['bahasa'] ?>:</div>
-                    <div class="rounded-md w-full p-1">
+                    <div class="rounded-md w-full px-4">
                         <div style="width:<?= $skill['value']?>%;background:<?= $skill['color']?>" class="rounded-md text-black p-2">
                             <?= $skill['value']?>%  
                         </div>
@@ -80,7 +80,7 @@ include "components/func.php";
                 <div id="<?=$porto['id']?>"  class=" hidden fixed  z-50 w-full h-full top-0 left-0 text-center bg-black bg-opacity-60 transition-all ease-in-out duration-500 " >
                     <!-- Carousel Start -->
                         <!-- button close -->
-                        <button class="z-50" onclick="tutup('<?=$porto['id']?>')">close</button>
+                        <button class=" border bg-red-500  border-red-500 rounded-md p-1 " onclick="tutup('<?=$porto['id']?>')">Close</button>
                            
                         <?php $index = $id  ?>
                         <?php $image =  getImg($portofolio[$index]['img'],$portofolio[$index]['imgs']) ?>

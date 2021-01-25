@@ -3,6 +3,7 @@ function showModal(id) {
     if (ele.classList.contains('hidden')) {
         ele.classList.remove('hidden');
         var swiper = new Swiper('.swiper-container', {
+            loop: true,
             navigation: {
                 nextEl: '#next',
                 prevEl: '#prev',

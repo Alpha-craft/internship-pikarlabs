@@ -3,7 +3,7 @@
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="script/script.js"></script>
-<script>
+<!-- <script>
     var swiper = new Swiper('.swiper-container', {
       navigation: {
         nextEl: '#next',
@@ -15,7 +15,7 @@
       },
     });
 
-  </script>
+  </script> -->
 
 </body>
 </html>
