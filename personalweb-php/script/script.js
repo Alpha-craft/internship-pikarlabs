@@ -6,7 +6,5 @@ function showModal(id) {
 }
 
 function close(_id) {
-    let doc = document.getElementById(_id);
-    doc.classList.add('hidden')
-    console.log("hemlo")
+    console.log('as');
 }

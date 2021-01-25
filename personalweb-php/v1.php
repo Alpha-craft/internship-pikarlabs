@@ -18,7 +18,7 @@ include "components/func.php";
                 <h4 class="text-2xl font-sans text-center" >Ainurahman</h4>
             </div>
             <div  class="transition duration-500 ease-in-out py-8 rounded-md hover:shadow-lg capitalize hover:bg-white bg-gray-100 ">
-                <p class="font-mono" ><span class="mx-4"></span> <?= $bio ?> </p>
+                <p class="font-mono" ><span class="px-4"></span> <?= $bio ?> </p>
             </div>
         </div>
         <!-- Bio end -->
@@ -80,7 +80,8 @@ include "components/func.php";
                 <div id="<?=$porto['id']?>"  class="hidden fixed  z-50 w-full h-full top-0 left-0 text-center bg-black bg-opacity-60 transition-all ease-in-out duration-500 " >
                     <!-- Carousel Start -->
                         <!-- button close -->
-                            <button onclick="close('<?=$porto['id']?>')"  >close</button>
+                            <span onclick="close('<?=$porto['id']?>')" >Tems</span>
+                            <button type="button" onclick="close('<?=$porto['id']?>')"  >close</button>
                         <?php $index = $id  ?>
                         <?php $image =  getImg($portofolio[$index]['img'],$portofolio[$index]['imgs']) ?>
                         <!-- Swiper -->
