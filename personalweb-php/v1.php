@@ -77,11 +77,11 @@ include "components/func.php";
             </div>
             <!-- Modal Start -->
             <?php foreach ($portofolio as $id => $porto) :?>
-                <div id="<?=$porto['id']?>"  class="hidden fixed  z-50 w-full h-full top-0 left-0 text-center bg-black bg-opacity-60 transition-all ease-in-out duration-500 " >
+                <div id="<?=$porto['id']?>"  class=" hidden fixed  z-50 w-full h-full top-0 left-0 text-center bg-black bg-opacity-60 transition-all ease-in-out duration-500 " >
                     <!-- Carousel Start -->
                         <!-- button close -->
-                            <span onclick="close('<?=$porto['id']?>')" >Tems</span>
-                            <button type="button" onclick="close('<?=$porto['id']?>')"  >close</button>
+                        <button class="z-50" onclick="tutup('<?=$porto['id']?>')">close</button>
+                           
                         <?php $index = $id  ?>
                         <?php $image =  getImg($portofolio[$index]['img'],$portofolio[$index]['imgs']) ?>
                         <!-- Swiper -->
@@ -93,6 +93,9 @@ include "components/func.php";
 
             <!-- Modal End -->
       	</div>
+         
+          
+          
         <!-- Portofolio End -->
 
         <!-- Email Start -->
@@ -104,5 +107,4 @@ include "components/func.php";
     </div>
     <!-- Container end -->
 </div>
-
 <?php include "components/footer.php" ?>
