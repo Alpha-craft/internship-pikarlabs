@@ -5,7 +5,7 @@ include "components/header.php";
 
 echo $twig->render('index.twig', [
   'versi' => $versi,
-  'keahlian' => $keahlian,
 ]);
 
+include "components/footer.php";
 ?>

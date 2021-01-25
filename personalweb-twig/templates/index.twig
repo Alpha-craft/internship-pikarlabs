@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    {% for ver in versi%}
-    <p>{{ver}}</p>
-    {% endfor %} {% for skill in keahlian %}
-    <p>{{skill.bahasa}}</p>
-    <p>{{skill.value}}</p>
-    {% endfor %}
-</body>
-
-</html>
+<div class="container mx-auto">
+    <div class="grid grid-cols-2 justify-items-center my-80  align-middle">
+        {% for ver in versi %}
+        <a href=" {{ver}} ">
+            <div class="box-border h-14 w-24 p-4 bg-red-600 rounded-2xl transform hover:scale-110">
+                <div class="text-center">
+                    {{ver}}
+                </div>
+            </div>
+        </a>
+        {%endfor%}
+    </div>
