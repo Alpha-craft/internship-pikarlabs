@@ -1,7 +1,6 @@
 <?php
 include "root.php";
-include "components/data.php";
-include "components/header.php";    
+include "components/data.php";  
 include "components/func.php";
 
 echo $twig->render('v2.twig',[
@@ -12,7 +11,4 @@ echo $twig->render('v2.twig',[
   'portofolio' => $portofolio,
 
 ]);
-include "components/email.php";
-
-include "components/footer.php"
 ?>
