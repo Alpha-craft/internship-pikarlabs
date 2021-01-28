@@ -13,7 +13,7 @@ include "components/func.php";
 }
 </style>
 
-<div  class="bg_img bg-fixed bg-no-repeat items-center justify-center  mb-12 bg-cover" >
+<div  class="bg_img bg-fixed bg-no-repeat items-center justify-center bg-cover" >
   <!-- hidden navbar -->
   <div id="nav" class="hidden" >
     <?php include "components/navbar.php"; ?>  
@@ -83,7 +83,13 @@ include "components/func.php";
         </div>
       </div>
       <!-- Portofolio End -->
+      <!-- Email Start -->
+      <div id="Contact" class="bg-gray-200 my-4 rounded-md" > 
+        <div class="text-left px-4 text-xl md:text-3xl border-b-2 border-gray-600" >Contact</div>
+        <?php include "components/email.php" ?>
+      </div>
+      <!-- Email End -->  
+
     <!-- Container End -->
 </div>
-
 <?php include "components/footer.php" ?>
