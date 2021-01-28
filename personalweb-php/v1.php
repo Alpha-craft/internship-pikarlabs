@@ -10,7 +10,7 @@ include "components/func.php";
 		<?php include "components/navbar.php" ?>
 		<!-- Navbar end -->
     <!-- Container start -->
-    <div class="md:container container md:mx-auto mx-3.5">
+    <div class="container container md:mx-auto ">
         <!-- Bio Start -->
         <div class=" inline-block ">
             <div class="transition duration-300 ease-in-out  my-8 bg-gray-100 hover:bg-white rounded-md hover:shadow-xl py-6 ">
