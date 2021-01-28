@@ -14,7 +14,11 @@ include "components/func.php";
 </style>
 
 <div  class="bg_img bg-fixed bg-no-repeat items-center justify-center  mb-12 bg-cover" >
-  
+  <!-- hidden navbar -->
+  <div id="nav" class="hidden" >
+    <?php include "components/navbar.php"; ?>  
+  </div>
+
   <div  class="flex items-center justify-center h-screen mb-12 " >
   <!-- Navbar Start -->
   <?php include "components/navbar.php"; ?>
@@ -24,7 +28,7 @@ include "components/func.php";
   <!-- Container Start -->
   <div class="container mx-auto  ">
     <!-- Bio start -->
-      <div  class=" bg-gray-200 my-12 md:py-4 py-2 rounded-md ">
+      <div  class=" bg-gray-200 my-12 md:py-4 py-2 px-4 rounded-md ">
       <h1 id="Profil" class="text-left text-xl border-b-2 border-gray-600 w-1/6 px-1 py-1 md:py-2 md:text-3xl" >Ainurahman</h1>
       <p class=" py-2 capitalize " ><span class="mx-2" ></span><?= $bio ?></p>
       </div>
@@ -59,26 +63,22 @@ include "components/func.php";
       <!-- Education End -->
 
       <!-- Portofolio Start -->
-      <div class="my-12 py-6 bg-gray-200 rounded-md" > 
-        <div class="text-left text-xl md:text-3xl border-b-2 border-gray-600" >Portofolio</div>
+      <div id="Portofolio" class="my-12 py-6 bg-gray-200 rounded-md" > 
+        <div class="text-left px-4 text-xl md:text-3xl border-b-2 border-gray-600" >Portofolio</div>
         <div class="flex md:flex-row flex-col" > 
           <?php foreach ($portofolio as $i => $exp) :?>
-            <div class="group transition duration-300 bg-gray-100 mx-4 my-4 hover:shadow-md hover:bg-white rounded-md " >
-              <div class="flex flex-col">
-                <div class="border-b-2 border-gray-600 py-2 my-4 mx-auto text-3xl" >
-                  <p class="text-center" ></p> <?= $exp['judul'] ?> 
-                </div>
-                <div class="bg-black"> <!-- agar gambar menjadi gelap sebelum di hover -->
-                  <img class="transition-opacity duration-500 ease-out w-auto h-auto opacity-75 group-hover:opacity-100" src="assets/<?= $exp['img']?>" alt="<?= $exp['img'] ?>">
+            <a href="portofolio.php?id=<?= $i?>">
+              <div class="group transition duration-300 bg-gray-100 mx-4 my-12 hover:shadow-md hover:bg-white rounded-md " >
+                <div class="flex flex-col">
+                  <div class="border-b-2 border-gray-600 py-2 my-4 mx-auto text-3xl" >
+                    <p class="text-center" ></p> <?= $exp['judul'] ?> 
+                  </div>
+                  <div class="bg-black"> <!-- agar gambar menjadi gelap sebelum di hover -->
+                    <img class="transition-opacity duration-500 ease-out w-auto h-auto opacity-75 group-hover:opacity-100" src="assets/<?= $exp['img']?>" alt="<?= $exp['img'] ?>">
+                  </div>
                 </div>
               </div>
-              <div class="flex flex-col my-4 py-2" >
-                <button onclick="showModal('<?= $exp['id']?>')" class="bg-green-500 rounded-md m-2 p-2 text-center hover:bg-green-400 trigger" >Galeri</button>
-                <a class="bg-blue-500 rounded-md m-2 p-2 text-center hover:bg-blue-400" href="<?= $exp['link']?>"target="_blank" >
-                  kunjungi
-                </a>
-              </div>
-            </div>
+            </a>
           <?php endforeach ?>
         </div>
       </div>

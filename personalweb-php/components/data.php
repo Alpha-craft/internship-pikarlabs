@@ -38,7 +38,7 @@
     $portofolio = [
         [
             'judul' => 'Svvebs',
-            'desc' => 'Web untuk berbagi gambar yang dibuat menggunakan HTML,CSS,JS,PHP',
+            'desc' => 'Web untuk berbagi gambar/ foto digital yang dibuat menggunakan HTML,CSS,JS dan PHP',
             'link' => 'http://svvebs.great-site.net/',
             'img' =>    'svvebs.png',
             'imgs' => [
@@ -49,7 +49,8 @@
                 'svvebsregist.png',
                 'login.png'
             ],
-            'id' => 'svvebs'
+            'id' => 'svvebs',
+            'tahun' => 2020,
         ],
         [
             'judul' => 'Web Portofolio',
@@ -60,7 +61,8 @@
                 'portofolio2.png',
                 'portofolio3.png'
             ],
-            'id' => 'porto'
+            'id' => 'porto',
+            'tahun' => 2020,
         ]
     ];
 

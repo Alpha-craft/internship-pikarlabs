@@ -17,7 +17,17 @@ function email($dari,$subjek,$pesan){
   echo $pesan;
   $header = 'From: '.$dari;
   mail($kepada,$subjek,$pesan,$header);
-  
+}
+
+function cekId($id,$data){
+  // jika indexnya ditemukan sesuai id
+  $hasil = null;
+  foreach ($data as $i => $datas){
+    if($id == $i) {
+      $hasil = true; //override varibel untuk cek
+    }
+  }
+  return $hasil;
 }
 
 ?>

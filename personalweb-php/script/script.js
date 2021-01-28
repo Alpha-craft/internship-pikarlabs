@@ -21,3 +21,14 @@ function tutup(_id) {
     comp.classList.add('hidden');
 
 }
+var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    navigation: {
+        nextEl: '#next',
+        prevEl: '#prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+    },
+});

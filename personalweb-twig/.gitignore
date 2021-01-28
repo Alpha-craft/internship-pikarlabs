@@ -1,6 +1,4 @@
 vendor
 composer.phar
 node_modules
-package.json
-package-lock.json
 tailwind.config.js
