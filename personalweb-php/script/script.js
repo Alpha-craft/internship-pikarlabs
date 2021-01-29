@@ -21,6 +21,17 @@ function tutup(_id) {
     comp.classList.add('hidden');
 
 }
+
+function showImg(img) {
+    let ele = document.getElementById(img);
+    ele.classList.remove('hidden')
+}
+
+function hiddenImg(img) {
+    let ele = document.getElementById(img);
+    ele.classList.add('hidden');
+}
+
 var swiper = new Swiper('.swiper-container', {
     loop: true,
     navigation: {

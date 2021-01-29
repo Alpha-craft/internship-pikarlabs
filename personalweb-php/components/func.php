@@ -12,9 +12,6 @@ function carousel($image){
 
 function email($dari,$subjek,$pesan){
   $kepada = "ainurahman03@gmail.com";
-  echo $dari;
-  echo $subjek;
-  echo $pesan;
   $header = 'From: '.$dari;
   mail($kepada,$subjek,$pesan,$header);
 }

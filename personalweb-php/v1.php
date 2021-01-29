@@ -5,7 +5,7 @@ include "components/func.php";
 ?>
 
 
-<div class="bg-gray-100">
+<div class="bg-gray-100 ">
 		<!-- Navbar Starts -->
 		<?php include "components/navbar.php" ?>
 		<!-- Navbar end -->
@@ -92,14 +92,12 @@ include "components/func.php";
             
 
             <!-- Modal End -->
-      	</div>
-         
-          
-          
+      	</div>          
         <!-- Portofolio End -->
 
+
         <!-- Email Start -->
-        <div class="my-12 bg-gray-200 shadow-inner h-auto w-auto rounded-md" >
+        <div class=" bg-gray-200 shadow-inner h-auto w-auto rounded-md" >
             <div class="text-left border-b-2 py-2 px-2 border-gray-600 text-2xl " >Email</div>
             <?php include"components/email.php" ?>
         </div>

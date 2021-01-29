@@ -3,13 +3,18 @@
 
 
 <div class="container mx-auto">
-    <div class="grid grid-cols-2 justify-items-center my-80  align-middle">
-    <?php foreach ($versi as $v) :?>
-        <a href="<?= $v ?>">  
-        <div class="box-border h-14 w-24 p-4 bg-red-600 rounded-2xl transform hover:scale-110">
-            <div class="text-center"> <?= $v ?></div>
-        </div>
-        </a>
-    <?php endforeach ?>
+    <div class=" grid grid-flow-row md:grid-cols-2 gap-4 my-80 ">
+        <?php foreach ($versi as $v) :?>
+            <a href="<?= $v['versi'] ?>" class="">  
+                <div class=" p-3 bg-green-400 rounded-md ">
+                    <div  class="text-center border-b-2 border-gray-600 capitalize "> <?= $v['id'] ?></div>
+                    <div  class="rounded-md" >
+                        <img src="assets/<?= $v['img'] ?>" class="p-2" alt="">
+                        <p class=" text-base capitalize p-2" > <?= $v['isi'] ?> </p>
+                    </div>
+                </div>
+            </a>
+        <?php endforeach ?>
+    </div>
 </div>
 <?php include "components/footer.php"; ?>
