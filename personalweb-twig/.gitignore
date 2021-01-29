@@ -2,3 +2,4 @@ vendor
 composer.phar
 node_modules
 tailwind.config.js
+templates_1

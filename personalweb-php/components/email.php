@@ -3,6 +3,7 @@ if(isset($_POST['kirim'])){
   $dari = $_POST['from'];
   $subjek = $_POST['subjek'];
   $pesan = $_POST['msg'];
+  $mail = true;
   email($dari,$subjek,$pesan);
   include "components/email_modal.php";
 }

@@ -1,6 +1,17 @@
 <?php
     $versi = [
-        'v1.php','v2.php'
+        [
+            'versi'=>'v1.php',
+            'img' => 'v1.png',
+            'id' => 'v1',
+            'isi' => 'berisi portofolio,riwayat pendidikan dan form untuk mengirim email'
+        ],
+        [
+            'versi'=>'v2.php',
+            'img' =>'v2.png',
+            'id' => 'v2',
+            'isi' => 'sama seperti v1 namun dengan layout yang berbeda'
+        ]
     ];
     $nav_item = [
         'Profil','Portofolio','Contact'
@@ -38,7 +49,7 @@
     $portofolio = [
         [
             'judul' => 'Svvebs',
-            'desc' => 'Web untuk berbagi gambar yang dibuat menggunakan HTML,CSS,JS,PHP',
+            'desc' => 'Web untuk berbagi gambar/ foto digital yang dibangun menggunakan HTML,CSS,JS dan PHP',
             'link' => 'http://svvebs.great-site.net/',
             'img' =>    'svvebs.png',
             'imgs' => [
@@ -49,7 +60,8 @@
                 'svvebsregist.png',
                 'login.png'
             ],
-            'id' => 'svvebs'
+            'id' => 'svvebs',
+            'tahun' => 2020,
         ],
         [
             'judul' => 'Web Portofolio',
@@ -60,9 +72,12 @@
                 'portofolio2.png',
                 'portofolio3.png'
             ],
-            'id' => 'porto'
+            'id' => 'porto',
+            'tahun' => 2020,
         ]
     ];
+
+    $modal_msg = "Terimakasih atas tanggapan anda";
 
 
 ?>
