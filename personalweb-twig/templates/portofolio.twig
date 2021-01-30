@@ -23,7 +23,7 @@
             <div class="bg-gray-300 shadow-inner md:my-8 my-2 mx-2 md:mx-8 rounded-md p-5  " >
               <img src="assets/{{ main_image }}" class="flex-1" alt="">
               <div class="flex-1 grid gap-3 md:grid-cols-2 md:my-1" >
-                {% for pict in image %}
+                {% for pict in galeri %}
                   <img src="assets/{{ pict }}" class="md:py-1 py-1" alt="">
                 {% endfor %}
               </div>
@@ -34,14 +34,14 @@
             <button class=" border bg-red-500  border-red-500 rounded-md p-1 " onclick="tutup('modal')">Close</button>
               
               <!-- Swiper -->
-              {% include "carousel.twig" %}
+              {% include "carousel.twig"  %}
             </div>
               <!-- Modal end -->
           </div>
           <div class="flex-1 p-7" >
           <div class="flex md:flex-row flex-col " >
             <button onclick="showModal('modal')" class="bg-green-500 rounded-md m-2 p-2 text-center hover:bg-green-400" >Galeri</button>
-            <a href="<?= $portofolio[$id]['link'] ?>" class=" bg-yellow-400 rounded-md m-2 p-2 text-center" target="blank" >
+            <a href="{{link}}" class=" bg-yellow-400 rounded-md m-2 p-2 text-center" target="blank" >
               <button  >Kunjungi</button>
             </a>
             <button class=" bg-blue-400 rounded-md m-2 p-2 text-center" onclick="kembali()" >Kembali</button>
