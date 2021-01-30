@@ -22,15 +22,10 @@ function tutup(_id) {
 
 }
 
-function showImg(img) {
-    let ele = document.getElementById(img);
-    ele.classList.remove('hidden')
+function kembali() {
+    window.history.back();
 }
 
-function hiddenImg(img) {
-    let ele = document.getElementById(img);
-    ele.classList.add('hidden');
-}
 
 var swiper = new Swiper('.swiper-container', {
     loop: true,

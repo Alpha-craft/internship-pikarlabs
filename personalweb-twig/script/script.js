@@ -21,3 +21,7 @@ function tutup(_id) {
     comp.classList.add('hidden');
 
 }
+
+function kembali() {
+    window.history.back();
+}

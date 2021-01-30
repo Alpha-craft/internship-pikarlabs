@@ -2,7 +2,7 @@
 include "root.php";
 include "components/data.php"; 
 include "components/func.php";
-
+$email = false;
 if(isset($_POST['kirim'])){
   $dari = $_POST['from'];
   $subjek = $_POST['subjek'];
