@@ -8,8 +8,8 @@ if(isset($_POST['kirim'])){
   $dari = $_POST['from'];
   $subjek = $_POST['subjek'];
   $pesan = $_POST['msg'];
-  $email = true;
   email($dari,$subjek,$pesan);
+  $email = true;
 }
 
 echo $twig->render('v2.twig',[
