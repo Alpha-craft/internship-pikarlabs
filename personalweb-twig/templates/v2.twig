@@ -1,5 +1,6 @@
 {% extends "layout.twig" %}
- {% block content %}
+
+{% block content %}
   <style>
   *{
     scroll-behavior: smooth;
@@ -39,7 +40,7 @@
         <!-- Skill end -->
 
         <!-- Education Start -->
-        <div class=" my-12 py-6  bg-gray-200 rounded-md " >
+        <div class="my-12 py-6 bg-gray-200 rounded-md " >
           <div class="text-center text-xl md:text-3xl border-b-2 border-gray-600" >Pendidikan</div>
           <div class="grid md:grid-cols-2" >
           {% for edu in pendidikan %}
@@ -51,7 +52,7 @@
         <!-- Education End -->
 
         <!-- Portofolio Start -->
-        <div id="Portofolio" class="my-12 py-6 bg-gray-200 rounded-md" > 
+        <div id="Portofolio" class="my-12 py-6 bg-gray-200 rounded-md"> 
           <div class="text-left px-4 text-xl md:text-3xl border-b-2 border-gray-600" >Portofolio</div>
           <div class="flex md:flex-row flex-col" > 
             {% for exp in portofolio %}
@@ -75,7 +76,7 @@
         <div id="Contact" class="bg-gray-200 my-4 rounded-md" > 
           <div class="text-left px-4 text-xl md:text-3xl border-b-2 border-gray-600" >Contact</div>
             {% include "email.twig" %}
-            {% if email == true %}
+            {% if email %}
               {% include "email_modal.twig" %}
             {% endif %}
         </div>

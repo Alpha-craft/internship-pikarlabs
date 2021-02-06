@@ -77,6 +77,7 @@
         ]
     ];
 
+    
     $modal_msg = "Terimakasih atas tanggapan anda";
 
 
